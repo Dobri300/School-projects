@@ -4,24 +4,24 @@ package KlasoveData;
 
 
 public class Date {
-		public int sek;
-		public int min;
-		public int chas;
-		public int den;
-		public int mesec;
-		public int godina;
+		private int second;
+		private int min;
+		private int hour;
+		private int day;
+		private int mounth;
+		private int year;
 		
 
 		public Date (int sekk,int minn, int chass, int denn,int mesecc, int godinaa) {
 			DateSet(sekk,minn, chass, denn,mesecc,godinaa);
 			
 		}
-		// tozi konstruktor go napravih i slojih vutre SetterMethod da se izpulnqva, koito setter method otdolu sum inicializiral
+
 		
 		
 		public void GodinaCheck() {
 			
-			if(godina%4 == 0) {
+			if(year%4 == 0) {
 				System.out.println("Visokosna e!");
 				
 			}else{
@@ -35,31 +35,63 @@ public class Date {
 		
 		public void SekIncrease() {
 			
-			sek++;
+			second++;
+			
+			if(second == 60) {
+				
+				second =0;
+				min+=1;
+				
+			}
+			if(min == 60) {
+				
+				min =0;
+				hour+=1;
+				
+			}
+			if(hour == 24) {
+				
+				hour =0;
+				day+=1;
+				
+			}
+			
+			if(day == 30) {
+				
+				day =0;
+				mounth+=1;
+				
+			}
+			if(mounth == 12) {
+				
+				mounth =0;
+				year+=1;
+				
+			}
 			
 		}
 		
 		public void SedmicaCount() {
 			
-		System.out.println("Tolkova sedmici -->  " + mesec*4+den/7+chas/(24*7)+min/(60*24*7)+sek/(60*60*24*7));
+		System.out.println("Tolkova sedmici -->  " + mounth*4+day/7+hour/(24*7)+min/(60*24*7)+second/(60*60*24*7));
 			
 		}
 		
 		public void DateSet(int sekk,int minn, int chass, int denn,int mesecc, int godinaa) {
 			
-			sek = sekk;
+			second = sekk;
 			min = minn;
-			chas = chass;
-			den = denn;
-			mesec = mesecc;
-			godina = godinaa;
+			hour = chass;
+			day = denn;
+			mounth = mesecc;
+			year = godinaa;
 			
 		}
 	
 	
 		public int sekGet() {
 			
-		return sek;
+		return second;
 		}
 		
 		public int minGet() {
@@ -69,58 +101,66 @@ public class Date {
 		
 		public int chasGet() {
 			
-		return chas;
+		return hour;
 		}
 		
 		public int denGet() {
 			
-		return den;
+		return day;
 		}
 		
 		public int mesecGet() {
 			
-		return mesec;
+		return mounth;
 		}
 		
 		public int godinaGet() {
 			
-		return godina;
+		return year;
 		}
 		
 		
+		public String toString() {
+			
+			
+			return year +" "+ mounth + " "+ day+ " "+  hour + " " + min +" " + hour +" " + second;
+			
+			
+		}
+			
 		public int compareTo(Date a) {
 			
 			
-			if(godina >a.godina) {
+			if(year >a.year) {
 				return 1;
 				
-			}else if(godina == a.godina){
+			}else if(year == a.year){
 				
-				if(mesec > a.mesec) {
+				if(mounth > a.mounth) {
 					return 1;
 					
-				}else if(mesec == a.mesec){
+				}else if(mounth == a.mounth){
 					
-					if(den >a.den) {
+					if(day >a.day) {
 						
 						return 1;
-					}else if(den == a.den){
+					}else if(day == a.day){
 						
-						if(chas >a.chas) {
+						if(hour >a.hour) {
 							
 							
 							return 1;
-						}else if (chas == a.chas){
+						}else if (hour == a.hour){
 							
 							if(min > a.min) {
 								
 								return 1;
 							}else if(min == a.min){
 								
-								if(sek > a.sek) {
+								if(second > a.second) {
 									
 									return 1;
-								}else if (sek == a.sek){
+								}else if (second == a.second){
 									
 									return 0;
 								}
@@ -133,36 +173,36 @@ public class Date {
 			}
 		
 			////
-			if(godina <a.godina) {
+			if(year <a.year) {
 				return -1;
 				
-			}else if(godina == a.godina){
+			}else if(year == a.year){
 				
-				if(mesec < a.mesec) {
+				if(mounth < a.mounth) {
 					return -1;
 					
-				}else if(mesec == a.mesec){
+				}else if(mounth == a.mounth){
 					
-					if(den <a.den) {
+					if(day <a.day) {
 						
 						return -1;
-					}else if(den == a.den){
+					}else if(day == a.day){
 						
-						if(chas <a.chas) {
+						if(hour <a.hour) {
 							
 							
 							return -1;
-						}else if (chas == a.chas){
+						}else if (hour == a.hour){
 							
 							if(min < a.min) {
 								
 								return -1;
 							}else if(min == a.min){
 								
-								if(sek < a.sek) {
+								if(second < a.second) {
 									
 									return -1;
-								}else if (sek == a.sek){
+								}else if (second == a.second){
 									
 									return 0;
 								}
