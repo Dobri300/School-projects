@@ -123,10 +123,211 @@ public class Date {
 		public String toString() {
 			
 			
-			return year +" "+ mounth + " "+ day+ " "+  hour + " " + min +" " + hour +" " + second;
+			return year +" "+ mounth + " "+ day+ " "+  hour + " " + min +" " + hour +" " + second + "The day of the week is: " + DayOfWeek.constGetByNum(day);
 			
 			
 		}
+		
+		public String toString(int a) {
+				
+				if(denGet() == 1) {
+					if(a==1) {
+						return "M";				
+					}
+					if(a==2) {
+						return "Mo";					
+					}
+					if(a==3) {
+						return "Mon";				
+					}
+					if(a==4) {
+						return "Mond";					
+					}
+					if(a==5) {
+						return "Monda";					
+					}
+					if(a==6) {
+						return "Monday";					
+					}
+				}
+				
+				if(denGet() == 2) {
+				
+					
+					if(a==1) {
+						return "T";				
+					}
+					if(a==2) {
+						return "Tu";					
+					}
+					if(a==3) {
+						return "Tue";				
+					}
+					if(a==4) {
+						return "Tues";					
+					}
+					if(a==5) {
+						return "Tuesd";					
+					}
+					if(a==6) {
+						return "Tuesda";					
+					}
+					if(a==7) {
+						return "Tuesday";					
+					}
+					
+					
+				}
+				if(denGet() == 3) {
+					
+					
+
+					if(a==1) {
+						return "W";				
+					}
+					if(a==2) {
+						return "We";					
+					}
+					if(a==3) {
+						return "Wed";				
+					}
+					if(a==4) {
+						return "Wedn";					
+					}
+					if(a==5) {
+						return "Wedne";					
+					}
+					if(a==6) {
+						return "Wednes";					
+					}
+					if(a==7) {
+						return "Wednesd";					
+					}
+					if(a==8) {
+						return "Wednesda";					
+					}
+					if(a==9) {
+						return "Wednesday";					
+					}
+					
+				}
+					if(denGet() == 4) {
+					
+					
+
+					if(a==1) {
+						return "T";				
+					}
+					if(a==2) {
+						return "Th";					
+					}
+					if(a==3) {
+						return "Thu";				
+					}
+					if(a==4) {
+						return "Thur";					
+					}
+					if(a==5) {
+						return "Thurs";					
+					}
+					if(a==6) {
+						return "Thursd";					
+					}
+					if(a==7) {
+						return "Thursda";					
+					}
+					if(a==8) {
+						return "Thursday";					
+					}
+					
+					
+				}				
+					if(denGet() == 5) {
+
+						if(a==1) {
+							return "F";				
+						}
+						if(a==2) {
+							return "Fr";					
+						}
+						if(a==3) {
+							return "Fri";				
+						}
+						if(a==4) {
+							return "Frid";					
+						}
+						if(a==5) {
+							return "Frida";					
+						}
+						if(a==6) {
+							return "Friday";					
+						}
+					
+											
+					}
+					if(denGet() == 6) {
+						if(a==1) {
+							return "S";				
+						}
+						if(a==2) {
+							return "Sa";					
+						}
+						if(a==3) {
+							return "Sat";				
+						}
+						if(a==4) {
+							return "Satu";					
+						}
+						if(a==5) {
+							return "Satur";					
+						}
+						if(a==6) {
+							return "Saturd";					
+						}
+						if(a==7) {
+							return "Saturda";					
+						}
+						if(a==8) {
+							return "Saturday";					
+						}				
+						
+					}	
+					if(denGet() == 7) {
+						if(a==1) {
+							return "S";				
+						}
+						if(a==2) {
+							return "Su";					
+						}
+						if(a==3) {
+							return "Sun";				
+						}
+						if(a==4) {
+							return "Sund";					
+						}
+						if(a==5) {
+							return "Sunda";					
+						}
+						if(a==6) {
+							return "Sunday";					
+						}
+					}	
+				
+					return null;
+			
+		}
+		
+		
+		public DayOfWeek DateDayGetter(Date d) {
+			
+			
+			DayOfWeek.constGetByNum(d.day);
+			
+			return null;
+		}
+		
+		
+		
 			
 		public int compareTo(Date a) {
 			
