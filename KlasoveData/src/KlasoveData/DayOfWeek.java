@@ -62,4 +62,35 @@ switch(a) {
 	return "Invalid Input";
 	
 }
+	public static DayOfWeek constGetByNum(int a) {
+		
+		if (a==1) {
+			return MONDAY;
+		}
+		if (a==2) {
+			return TUESDAY;
+		}
+		if (a==3) {
+			return WEDNESDAY;
+		}
+		if (a==4) {
+			return THURSDAY;
+		}
+	
+		if (a==5) {
+			return FRIDAY;
+		}
+		
+		if (a==6) {
+			return SATURDAY;
+		}
+		if (a==7) {
+			return SUNDAY;
+		}
+		
+		return null;
+		
+	}
+	
+	
 }
