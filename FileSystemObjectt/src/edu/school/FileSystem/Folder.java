@@ -55,5 +55,4 @@ public class Folder extends FileSystemObject{
 		this.files[index - 1] = o;
 		this.index++;
 	}
-
 }

@@ -61,9 +61,6 @@ public class Test {
 		frame.add(object_5);
 		
 		
-
-		
-		
 		
 		
 	}

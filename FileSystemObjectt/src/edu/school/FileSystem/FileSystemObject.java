@@ -22,4 +22,5 @@ public abstract class FileSystemObject {
 	public FileSystemObject(String nameValue) {
 		this.setName(nameValue);
 	}
+	
 }
